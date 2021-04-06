@@ -8,11 +8,31 @@ services:
       service: postgres
     environment:
       - KOBO_POSTGRES_DB_SERVER_ROLE=primary
+    networks:
+      kobo-be-network:
+        aliases:
+          - postgres
+
+  pgadmin:
+    image: dpage/pgadmin4
+    depends_on: 
+      - postgres
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=sysadmin@agape.dev
+      - PGADMIN_DEFAULT_PASSWORD=!Sunshine1
+    ports:
+      - 8001:80
+    networks:
+      kobo-be-network:
+        aliases:
+          - pgadmin4
 
   mongo:
     extends:
       file: docker-compose.backend.template.yml
       service: mongo
+    networks:
+      kobo-be-network:
 
   redis_main:
     extends:
@@ -20,6 +40,8 @@ services:
       service: redis_main
     environment:
       - KOBO_REDIS_SERVER_ROLE=main
+    networks:
+      kobo-be-network:
 
   redis_cache:
     extends:
@@ -27,6 +49,8 @@ services:
       service: redis_cache
     environment:
       - KOBO_REDIS_SERVER_ROLE=cache
+    networks:
+      kobo-be-network:
 
 networks:
   kobo-be-network:

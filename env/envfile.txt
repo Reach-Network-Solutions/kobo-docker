@@ -3,7 +3,7 @@
 #######################
 
 # Choose between http or https
-PUBLIC_REQUEST_SCHEME=https
+PUBLIC_REQUEST_SCHEME=http
 # The publicly-accessible domain where your KoBo Toolbox instance will be reached (e.g. example.com).
 PUBLIC_DOMAIN_NAME=domain.name
 # The private domain used in docker network. Useful for communication between containers without passing through
@@ -21,18 +21,18 @@ ENKETO_EXPRESS_PUBLIC_SUBDOMAIN=ee
 # ENKETO_API_KEY and the duplication will no longer be necessary.
 # For a description of this setting, see "api key" here:
 # https://github.com/kobotoolbox/enketo-express/tree/master/config#linked-form-and-data-server.
-ENKETO_API_KEY=
-ENKETO_API_TOKEN=
+ENKETO_API_KEY=!Sunshine1
+ENKETO_API_TOKEN=!Sunshine1
 
 # Canonically a 50-character random string. For Django 1.8.13, see https://docs.djangoproject.com/en/1.8/ref/settings/#secret-key and https://github.com/django/django/blob/4022b2c306e88a4ab7f80507e736ce7ac7d01186/django/core/management/commands/startproject.py#L29-L31.
 # To generate a secret key in the same way as `django-admin startproject` you can run:
 # docker-compose run --rm kpi python -c 'from django.utils.crypto import get_random_string; print(get_random_string(50, "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)"))'
-DJANGO_SECRET_KEY=
+DJANGO_SECRET_KEY=!Sunshine1
 
 # The initial superuser's username.
-KOBO_SUPERUSER_USERNAME=
+KOBO_SUPERUSER_USERNAME=sysadmin
 # The initial superuser's password.
-KOBO_SUPERUSER_PASSWORD=
+KOBO_SUPERUSER_PASSWORD=!Sunshine1
 
 # The e-mail address where your users can contact you.
 KOBO_SUPPORT_EMAIL=support@domain.name

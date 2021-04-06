@@ -5,9 +5,9 @@ USE_X_FORWARDED_HOST=False
 
 ENKETO_VERSION=Express
 KPI_PREFIX=/
-KPI_BROKER_URL=redis://:kobo@redis-main.domain.name:6379/1
+KPI_BROKER_URL=redis://:kobo@redis_main:6379/1
 
-KPI_MONGO_HOST=mongo.domain.name
+KPI_MONGO_HOST=mongo
 
 
 DJANGO_LANGUAGE_CODES=en fr es ar zh-hans hi ku
