@@ -44,7 +44,7 @@ services:
           - kobocat.docker.container
 
   kpi:
-    image: eu.gcr.io/agapedev/nexusforms-kpi:0.1.0
+    image: gcr.io/wezadev/testcontainer
     hostname: kpi
     env_file:
       - ../kobo-env/envfile.txt
